@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Danishanwar01/News-Web-Frontend/static/css/main.d1280539.css",
+    "main.js": "/Danishanwar01/News-Web-Frontend/static/js/main.4301773f.js",
+    "static/js/453.721e29f3.chunk.js": "/Danishanwar01/News-Web-Frontend/static/js/453.721e29f3.chunk.js",
+    "static/media/r2.jpg": "/Danishanwar01/News-Web-Frontend/static/media/r2.01bf3bb2fc4e694c236e.jpg",
+    "static/media/r1.jpg": "/Danishanwar01/News-Web-Frontend/static/media/r1.1326239a3288e3e52bb0.jpg",
+    "static/media/r4.jpg": "/Danishanwar01/News-Web-Frontend/static/media/r4.2b71bd537448d0df7a8c.jpg",
+    "static/media/r3.jpg": "/Danishanwar01/News-Web-Frontend/static/media/r3.b7d2a5de42fdc1d11533.jpg",
+    "index.html": "/Danishanwar01/News-Web-Frontend/index.html",
+    "main.d1280539.css.map": "/Danishanwar01/News-Web-Frontend/static/css/main.d1280539.css.map",
+    "main.4301773f.js.map": "/Danishanwar01/News-Web-Frontend/static/js/main.4301773f.js.map",
+    "453.721e29f3.chunk.js.map": "/Danishanwar01/News-Web-Frontend/static/js/453.721e29f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1280539.css",
+    "static/js/main.4301773f.js"
+  ]
+}
