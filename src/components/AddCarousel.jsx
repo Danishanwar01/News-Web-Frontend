@@ -35,7 +35,7 @@ function AddCarousel() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/admin/dashboard/carousel', {
+      const response = await fetch('https://newsweb-9.onrender.com/admin/dashboard/carousel', {
         method: 'POST',
         body: formData,
       });
@@ -45,7 +45,7 @@ function AddCarousel() {
         setMessage(data.message || 'Failed to add carousel item');
       } else {
         setMessage('Carousel item added successfully!');
-        // Clear the form fields on success
+  
         setCarouselData({ title: '', caption: '', image: null });
       }
     } catch (error) {

@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+   
     console.log(formData);
   };
 
@@ -24,7 +24,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-content">
-        {/* Contact Form */}
+    
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -73,7 +73,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Contact Info */}
+  
         <div className="contact-info">
           <div className="info-card">
             <div className="info-item">

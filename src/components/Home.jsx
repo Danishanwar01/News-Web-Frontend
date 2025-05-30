@@ -10,7 +10,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API_ENDPOINT = 'http://localhost:5000/admin/dashboard/all-articles';
+  const API_ENDPOINT = 'https://newsweb-9.onrender.com/admin/dashboard/all-articles';
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -19,7 +19,7 @@ function Home() {
         if (!response.ok) throw new Error('Failed to fetch articles');
         const data = await response.json();
         
-        // Sort articles by date in descending order (newest first)
+      
         const sortedArticles = (data.articles || []).sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt);
         });
@@ -80,7 +80,7 @@ function Home() {
               {article.image && (
                 <div className="article-image">
                   <img
-                    src={`http://localhost:5000/uploads/${article.image}`}
+                    src={`https://newsweb-9.onrender.com/uploads/${article.image}`}
                     alt={article.title}
                     loading="lazy"
                   />

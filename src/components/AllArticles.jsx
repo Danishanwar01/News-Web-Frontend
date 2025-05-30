@@ -5,12 +5,12 @@ function AllArticles() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [editingArticle, setEditingArticle] = useState(null); // article being edited
+  const [editingArticle, setEditingArticle] = useState(null); 
   const [updateMessage, setUpdateMessage] = useState('');
 
   const fetchArticles = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/dashboard/all-articles');
+      const response = await fetch('https://newsweb-9.onrender.com/admin/dashboard/all-articles');
       if (!response.ok) {
         throw new Error('Failed to fetch articles');
       }
@@ -29,7 +29,7 @@ function AllArticles() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/admin/dashboard/delete-article/${id}`, {
+      const response = await fetch(`https://newsweb-9.onrender.com/admin/dashboard/delete-article/${id}`, {
         method: 'DELETE',
       });
       const data = await response.json();
@@ -72,7 +72,7 @@ function AllArticles() {
       formData.append('image', editingArticle.newImage);
     }
     try {
-      const response = await fetch(`http://localhost:5000/admin/dashboard/update-article/${editingArticle._id}`, {
+      const response = await fetch(`https://newsweb-9.onrender.com/admin/dashboard/update-article/${editingArticle._id}`, {
         method: 'PUT',
         body: formData,
       });
@@ -143,7 +143,7 @@ function AllArticles() {
                   <h3>{article.title}</h3>
                   {article.image && (
                     <img 
-                      src={`http://localhost:5000/uploads/${article.image}`} 
+                      src={`https://newsweb-9.onrender.com/uploads/${article.image}`} 
                       alt={article.title} 
                       style={{ width: '200px', height: 'auto', marginBottom: '0.5rem' }}
                     />

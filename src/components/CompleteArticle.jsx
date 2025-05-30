@@ -14,7 +14,7 @@ function CompleteArticle() {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/admin/dashboard/article/${id}`);
+        const res = await fetch(`https://newsweb-9.onrender.com/admin/dashboard/article/${id}`);
         if (!res.ok) throw new Error('Failed to fetch article');
         const data = await res.json();
         setArticle(data.article);
@@ -86,7 +86,7 @@ function CompleteArticle() {
       {article.image && (
         <figure className="article-hero">
           <img
-            src={`http://localhost:5000/uploads/${article.image}`}
+            src={`https://newsweb-9.onrender.com/uploads/${article.image}`}
             alt={article.title}
             loading="lazy"
           />

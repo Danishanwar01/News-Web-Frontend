@@ -23,13 +23,13 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bbc-navbar">
       <div className="container-fluid px-lg-4">
-        {/* Brand */}
+
         <Link className="navbar-brand" to="/" onClick={closeMenu}>
           <span className="brand-first">The</span>
           <span className="brand-second">Awaz</span>
         </Link>
 
-        {/* Mobile Toggler */}
+      
         <button
           className="navbar-toggler"
           type="button"
@@ -39,9 +39,8 @@ function Navbar() {
           <FontAwesomeIcon icon={isExpanded ? faTimes : faBars} />
         </button>
 
-        {/* Collapsible Content */}
         <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
-          {/* Left Side Navigation */}
+    
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {admin ? (
               <>

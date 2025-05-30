@@ -20,7 +20,7 @@ function AdminDashboard() {
         </header>
 
         <div className="dashboard-grid">
-          {/* Quick Actions Section */}
+       
           <Link to="/admin/dashboard/add-article" className="dashboard-card action-card primary">
             <FontAwesomeIcon icon={faPlusCircle} className="card-icon" />
             <div className="card-content">
@@ -37,7 +37,6 @@ function AdminDashboard() {
             </div>
           </Link>
 
-          {/* Analytics Section */}
           <div className="dashboard-card analytics-card">
             <div className="card-header">
               <FontAwesomeIcon icon={faChartLine} />
@@ -75,7 +74,6 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* User Profile Section */}
           <div className="dashboard-card profile-card">
             <div className="card-header">
               <FontAwesomeIcon icon={faUserCog} />

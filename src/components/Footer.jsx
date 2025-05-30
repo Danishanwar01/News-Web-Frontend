@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-container">
-        {/* Brand Section */}
+    
         <div className="footer-brand">
           <h2 className="footer-logo">TheAwaz</h2>
           <p className="footer-tagline">Bringing Truth to Light</p>
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+    
         <div className="footer-section">
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
+ 
       <div className="footer-bottom">
         <p>© 2025 TheAwaz. All rights reserved. | <Link to="/privacy">Privacy Policy</Link> | <Link to="/terms">Terms of Use</Link></p>
       </div>

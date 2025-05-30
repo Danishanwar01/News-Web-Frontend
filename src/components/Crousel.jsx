@@ -9,11 +9,11 @@ function Carousel() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  // Card dimensions
+
   const cardWidth = 300;
   const cardHeight = 180;
 
-  // Mobile detection and resize handler
+ 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -24,7 +24,6 @@ function Carousel() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Touch handlers
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -44,12 +43,12 @@ function Carousel() {
     if (isLeftSwipe) nextSlide();
     if (isRightSwipe) prevSlide();
     
-    // Reset touch values
+ 
     setTouchStart(0);
     setTouchEnd(0);
   };
 
-  // Slider container styles
+
   const sliderContainerStyle = {
     display: 'flex',
     transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -58,7 +57,7 @@ function Carousel() {
     touchAction: 'pan-y'
   };
 
-  // Card styles
+ 
   const cardStyle = {
     position: 'relative',
     width: `${cardWidth}px`,
@@ -74,7 +73,7 @@ function Carousel() {
     }
   };
 
-  // Image styles
+
   const imageStyle = {
     width: '100%',
     height: '100%',
@@ -82,14 +81,14 @@ function Carousel() {
     objectPosition: 'center'
   };
 
-  // Wrapper styles
+
   const sliderWrapperStyle = {
     position: 'relative',
     overflow: 'hidden',
     marginTop: '30px'
   };
 
-  // Navigation button styles
+
   const navButtonStyle = {
     position: 'absolute',
     top: '50%',
@@ -113,7 +112,7 @@ function Carousel() {
     }
   };
 
-  // Overlay styles
+ 
   const overlayStyle = {
     position: 'absolute',
     bottom: '0',
@@ -125,7 +124,7 @@ function Carousel() {
     boxSizing: 'border-box'
   };
 
-  // Title styles
+
   const titleStyle = {
     margin: 0,
     fontSize: '1.1rem',
@@ -134,11 +133,11 @@ function Carousel() {
     textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
   };
 
-  // Fetch carousel data
+
   useEffect(() => {
     const fetchCarouselData = async () => {
       try {
-        const res = await fetch('http://localhost:5000/admin/dashboard/carousel');
+        const res = await fetch('https://newsweb-9.onrender.com/admin/dashboard/carousel');
         if (!res.ok) throw new Error('Failed to fetch carousel data');
         const data = await res.json();
         setCarouselItems(data.carousel || []);
@@ -152,7 +151,6 @@ function Carousel() {
     fetchCarouselData();
   }, []);
 
-  // Slide navigation
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev >= carouselItems.length - 1 ? 0 : prev + 1));
   };
@@ -161,11 +159,11 @@ function Carousel() {
     setCurrentSlide((prev) => (prev <= 0 ? carouselItems.length - 1 : prev - 1));
   };
 
-  // Auto-advance slides
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 5002);
     return () => clearInterval(interval);
   }, [carouselItems, currentSlide]);
 
@@ -207,7 +205,7 @@ function Carousel() {
             {carouselItems.map((item, index) => (
               <div key={item._id || index} style={cardStyle}>
                 <img
-                  src={`http://localhost:5000/uploads/${item.image}`}
+                  src={`https://newsweb-9.onrender.com/uploads/${item.image}`}
                   alt={item.title}
                   style={imageStyle}
                   loading="lazy"

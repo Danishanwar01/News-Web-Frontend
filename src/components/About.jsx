@@ -10,7 +10,7 @@ import reporter3 from '../assets/r3.jpg';
 const About = () => {
   return (
     <div className="about-container">
-      {/* Hero Section */}
+    
       <section className="about-hero">
         <div className="hero-content">
           <h1>Truth in Every Story</h1>
@@ -21,7 +21,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
+     
       <section className="mission-section">
         <div className="mission-content">
           <h2>Our Mission</h2>
@@ -47,7 +47,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+
       <section className="team-section">
         <h2>Meet Our Leaders</h2>
         <div className="team-grid">
@@ -78,7 +78,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+    
       <section className="values-section">
         <h2>Our Core Values</h2>
         <div className="values-grid">

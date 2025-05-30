@@ -1,4 +1,4 @@
-// src/components/AddArticle.jsx
+
 import React, { useState } from 'react';
 
 function AddArticle() {
@@ -28,7 +28,7 @@ function AddArticle() {
     e.preventDefault();
     setMessage('');
     
-    // Create a FormData object to handle file upload
+
     const formData = new FormData();
     formData.append('title', articleData.title);
     formData.append('category', articleData.category);
@@ -38,7 +38,7 @@ function AddArticle() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/admin/dashboard/add-article', {
+      const response = await fetch('https://newsweb-9.onrender.com/admin/dashboard/add-article', {
         method: 'POST',
         body: formData,
       });
@@ -48,7 +48,7 @@ function AddArticle() {
         setMessage(data.message || 'Failed to add article');
       } else {
         setMessage('Article added successfully!');
-        // Clear the form on success
+     
         setArticleData({ title: '', category: '', content: '', image: null });
       }
     } catch (error) {

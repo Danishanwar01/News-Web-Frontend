@@ -11,7 +11,7 @@ function AdminCarousel() {
 
   const fetchCarouselItems = async () => {
     try {
-      const res = await fetch('http://localhost:5000/admin/dashboard/carousel');
+      const res = await fetch('https://newsweb-9.onrender.com/admin/dashboard/carousel');
       if (!res.ok) throw new Error('Failed to fetch carousel items');
       const data = await res.json();
       setCarouselItems(data.carousel || []);
@@ -28,7 +28,7 @@ function AdminCarousel() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/dashboard/carousel/${id}`, {
+      const res = await fetch(`https://newsweb-9.onrender.com/admin/dashboard/carousel/${id}`, {
         method: 'DELETE'
       });
       const data = await res.json();
@@ -62,7 +62,7 @@ function AdminCarousel() {
       formData.append('image', editingItem.newImage);
     }
     try {
-      const res = await fetch(`http://localhost:5000/admin/dashboard/carousel/${editingItem._id}`, {
+      const res = await fetch(`https://newsweb-9.onrender.com/admin/dashboard/carousel/${editingItem._id}`, {
         method: 'PUT',
         body: formData
       });
@@ -83,7 +83,7 @@ function AdminCarousel() {
     <div style={{ maxWidth: '800px', margin: '2rem auto', padding: '1rem' }}>
       <h2>Manage Carousel Items</h2>
 
-      {/* Add Carousel Link */}
+   
       <Link to="/admin/dashboard/carousel/add">
         <button style={{ marginBottom: '1rem' }}>Add New Carousel Item</button>
       </Link>
@@ -127,7 +127,7 @@ function AdminCarousel() {
                   <h3>{item.title}</h3>
                   {item.image && (
                     <img 
-                      src={`http://localhost:5000/uploads/${item.image}`} 
+                      src={`https://newsweb-9.onrender.com/uploads/${item.image}`} 
                       alt={item.title} 
                       style={{ width: '200px', height: 'auto' }}
                     />
